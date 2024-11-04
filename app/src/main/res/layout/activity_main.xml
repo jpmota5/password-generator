@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#f0f0f0">
+
+        <!-- Cabeçalho com título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gerador de Senhas"
+            android:background="#483D8B"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textStyle="bold" />
+
+        <!-- Configurações de Opções -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opções de geração"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Opções com interruptores -->
+        <Switch
+            android:id="@+id/switch_uppercase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Incluir letras maiúsculas" />
+
+        <Switch
+            android:id="@+id/switch_lowercase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Incluir letras minúsculas" />
+
+        <Switch
+            android:id="@+id/switch_numbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Incluir números" />
+
+        <Switch
+            android:id="@+id/switch_special_chars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Incluir caracteres especiais" />
+
+        <Switch
+            android:id="@+id/switch_exclude_similar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excluir caracteres semelhantes (i, l, 1, o, 0)" />
+
+        <!-- Comprimento da senha -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comprimento da senha"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <SeekBar
+            android:id="@+id/seekbar_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="20"
+            android:progress="8" />
+
+        <TextView
+            android:id="@+id/text_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comprimento: 8"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp" />
+
+        <!-- Senha gerada -->
+        <TextView
+            android:id="@+id/text_generated_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sua senha será exibida aqui"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:background="#B0C4DE"
+            android:textColor="@android:color/white" />
+
+        <!-- Botões de ação -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_generate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gerar Senha"
+                android:padding="8dp" />
+
+            <Button
+                android:id="@+id/button_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copiar"
+                android:padding="8dp"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
